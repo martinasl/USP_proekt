@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="521.0" prefWidth="378.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField layoutX="35.0" layoutY="130.0" promptText="Град" />
+      <TextField layoutX="35.0" layoutY="195.0" promptText="Изложение" />
+      <TextField layoutX="35.0" layoutY="259.0" promptText="Брой стаи " />
+      <TextField layoutX="35.0" layoutY="328.0" promptText="Цена" />
+      <Button layoutX="110.0" layoutY="391.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="78.0" text="Добави " />
+      <Button layoutX="25.0" layoutY="391.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="78.0" text="Назад" />
+      <AnchorPane layoutY="-2.0" prefHeight="64.0" prefWidth="378.0" style="-fx-background-color: #715c76;">
+         <children>
+            <Text fill="#fffffff2" layoutX="109.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Добавяне на имоти">
+               <font>
+                  <Font name="Dutch 801 Extra Bold BT" size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="112.0" fitWidth="168.0" layoutX="210.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/ap5.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="141.0" fitWidth="168.0" layoutX="210.0" layoutY="173.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/ap3.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="148.0" fitWidth="168.0" layoutX="210.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/ap6.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="128.0" fitWidth="168.0" layoutX="210.0" layoutY="404.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/ap1.jpeg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
