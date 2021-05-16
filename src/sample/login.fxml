@@ -20,7 +20,7 @@
                   <Image url="@../../images/B (2).png" />
                </image>
             </ImageView>
-            <TextField layoutX="444.0" layoutY="161.0" opacity="0.24" promptText="E-mail" />
+            <TextField layoutX="444.0" layoutY="161.0" opacity="0.75" promptText="E-mail" />
             <Button layoutX="474.0" layoutY="260.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="90.0" text="Log In">
                <font>
                   <Font name="SimSun-ExtB" size="10.0" />
@@ -36,7 +36,7 @@
                   <Font name="SimSun-ExtB" size="8.0" />
                </font>
             </Hyperlink>
-            <PasswordField layoutX="445.0" layoutY="207.0" opacity="0.24" promptText="Password" />
+            <PasswordField layoutX="445.0" layoutY="207.0" opacity="0.75" promptText="Password" />
       </children>
     </AnchorPane>
   </children>
