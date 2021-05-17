@@ -16,7 +16,7 @@
       <children>
             <ImageView fitHeight="455.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../images/B (1).png" />
+                  <Image url="@../images/B (1).png" />
                </image>
             </ImageView>
             <TextField layoutX="447.0" layoutY="144.0" opacity="0.75" promptText="E-mail" />

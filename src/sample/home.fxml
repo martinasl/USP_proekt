@@ -11,12 +11,12 @@
    <children>
       <ImageView fitHeight="530.0" fitWidth="379.0" layoutX="-2.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../images/homeeeeee.jpg" />
+            <Image url="@../images/homeeeeee.jpg" />
          </image>
       </ImageView>
       <ImageView fitHeight="93.0" fitWidth="194.0" layoutX="81.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../images/logo.png" />
+            <Image url="@../images/logo.png" />
          </image>
       </ImageView>
       <QuadCurve controlX="28.33331298828125" controlY="83.99998474121094" endX="28.333343505859375" endY="-62.0" fill="#567796" layoutX="322.0" layoutY="172.0" opacity="0.17" startX="-201.80001831054688" startY="-61.59999084472656" stroke="BLACK" strokeType="INSIDE" />

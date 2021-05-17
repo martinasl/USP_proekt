@@ -17,11 +17,11 @@
       <children>
             <ImageView fitHeight="414.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../images/B (2).png" />
+                  <Image url="@../images/B (2).png" />
                </image>
             </ImageView>
-            <TextField layoutX="444.0" layoutY="161.0" opacity="0.75" promptText="E-mail" />
-            <Button layoutX="474.0" layoutY="260.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="90.0" text="Log In">
+            <TextField fx:id="emailTextField" layoutX="444.0" layoutY="161.0" opacity="0.75" promptText="E-mail" />
+            <Button fx:id="loginButton" layoutX="474.0" layoutY="282.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="90.0" text="Log In">
                <font>
                   <Font name="SimSun-ExtB" size="10.0" />
                </font>
@@ -31,12 +31,13 @@
                   <Font name="SimSun-ExtB" size="24.0" />
                </font>
             </Text>
-            <Hyperlink layoutX="492.0" layoutY="297.0" text="Registration">
+            <Hyperlink layoutX="492.0" layoutY="319.0" text="Registration">
                <font>
                   <Font name="SimSun-ExtB" size="8.0" />
                </font>
             </Hyperlink>
-            <PasswordField layoutX="445.0" layoutY="207.0" opacity="0.75" promptText="Password" />
+            <PasswordField fx:id="enterPasswordField" layoutX="445.0" layoutY="207.0" opacity="0.75" promptText="Password" />
+            <Text fx:id="errorText" fill="#ff0000" layoutX="441.0" layoutY="261.0" opacity="0.65" strokeType="OUTSIDE" strokeWidth="0.0" />
       </children>
     </AnchorPane>
   </children>

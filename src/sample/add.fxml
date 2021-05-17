@@ -27,22 +27,22 @@
       </AnchorPane>
       <ImageView fitHeight="112.0" fitWidth="168.0" layoutX="210.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../images/ap5.jpg" />
+            <Image url="@../images/ap5.jpg" />
          </image>
       </ImageView>
       <ImageView fitHeight="141.0" fitWidth="168.0" layoutX="210.0" layoutY="173.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../images/ap3.jpg" />
+            <Image url="@../images/ap3.jpg" />
          </image>
       </ImageView>
       <ImageView fitHeight="148.0" fitWidth="168.0" layoutX="210.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../images/ap6.jpg" />
+            <Image url="@../images/ap6.jpg" />
          </image>
       </ImageView>
       <ImageView fitHeight="128.0" fitWidth="168.0" layoutX="210.0" layoutY="404.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../images/ap1.jpeg" />
+            <Image url="@../images/ap1.jpeg" />
          </image>
       </ImageView>
    </children>
