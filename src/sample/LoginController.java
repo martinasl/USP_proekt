@@ -2,6 +2,7 @@ package sample;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.TextField;
 import javafx.scene.control.PasswordField;
 import javafx.scene.image.Image;
 import javafx.scene.control.Button;
@@ -18,7 +19,7 @@ public class LoginController implements Initializable {
     @FXML
     private Label errorText;
     @FXML
-    private TextField emailField;
+    private TextField emailText;
     @FXML
     private PasswordField enterPasswordField;
     @FXML
@@ -27,7 +28,7 @@ public class LoginController implements Initializable {
 
     public void loginButton() {
         errorText.setText("Wrong username or password");
-        if(emailField.getText().isBlank() == false && enterPasswordField.getText().isBlank()== false){
+        if(emailText.getText().isBlank() == false && enterPasswordField.getText().isBlank()== false){
             validateLogin();
 
         } else {
