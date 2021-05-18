@@ -27,7 +27,7 @@ public class LoginController implements Initializable {
 
 
     public void loginButton() {
-        errorText.setText("Wrong username or password");
+        errorText.setText("Wrong email or password");
         if(emailText.getText().isBlank() == false && enterPasswordField.getText().isBlank()== false){
             validateLogin();
 
