@@ -26,21 +26,34 @@
     <show-object-properties value="true" />
     <loaded-nodes>
       <connection connection-id="877dccc9-8afa-4309-9e1e-3f5bcd511da6">
-        <schema name="SYS" object-types="table, view, materialized view, synonym, sequence, procedure, function, package, type, database trigger, dimension, cluster, dblink" />
+        <schema name="PUBLIC" object-types="synonym, sequence, function, package, type" />
         <schema name="USP" object-types="table, view, materialized view, synonym, sequence, procedure, function, package, type, database trigger, dimension, cluster, dblink, constraint, index, column, dataset trigger, nested table" />
       </connection>
     </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="877dccc9-8afa-4309-9e1e-3f5bcd511da6">
-      <console name="USP" type="STANDARD" schema="USP" session="Main" />
+      <console name="USP" type="STANDARD" schema="" session="Main" />
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files />
+    <open-files>
+      <object connection-id="877dccc9-8afa-4309-9e1e-3f5bcd511da6" object-ref="schemas/USP/tables/IMOTI" />
+    </open-files>
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="877dccc9-8afa-4309-9e1e-3f5bcd511da6" />
+  </component>
+  <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="877dccc9-8afa-4309-9e1e-3f5bcd511da6" dataset="USP.IMOTI" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="877dccc9-8afa-4309-9e1e-3f5bcd511da6" dataset="USP.IZLOJENIE" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="877dccc9-8afa-4309-9e1e-3f5bcd511da6" dataset="USP.VID" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="877dccc9-8afa-4309-9e1e-3f5bcd511da6" dataset="USP.USERS" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="877dccc9-8afa-4309-9e1e-3f5bcd511da6" dataset="USP.GRAD" active-filter-id="EMPTY_FILTER">
+      <filter id="edee6973-1e34-4cae-96f6-055b0693a47b" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="ID_GRAD" operator="=" value="" active="true" />
+      </filter>
+    </filter-actions>
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
@@ -84,7 +97,7 @@
           <database value="XE" />
           <type value="USER_PASSWORD" />
           <user value="USP" />
-          <deprecated-pwd value="dXNw" />
+          <deprecated-pwd value="" />
         </database>
         <properties>
           <auto-commit value="false" />
