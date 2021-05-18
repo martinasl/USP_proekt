@@ -18,13 +18,16 @@ public class LoginController implements Initializable {
     @FXML
     private Label errorText;
     @FXML
-    private TextField emailTextField;
+    private TextField emailField;
     @FXML
     private PasswordField enterPasswordField;
+    @FXML
+    private Button loginButton;
 
-    public void LoginButtonOnAction() {
+
+    public void loginButton() {
         errorText.setText("Wrong username or password");
-        if(emailTextField.getText().isBlank() == false && enterPasswordField.getText().isBlank()== false){
+        if(emailField.getText().isBlank() == false && enterPasswordField.getText().isBlank()== false){
             validateLogin();
 
         } else {
@@ -33,8 +36,6 @@ public class LoginController implements Initializable {
         }
     }
 
-    @FXML
-    private Button loginButton;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

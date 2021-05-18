@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -20,7 +21,7 @@
                   <Image url="@../images/B (2).png" />
                </image>
             </ImageView>
-            <TextField fx:id="emailTextField" layoutX="444.0" layoutY="161.0" opacity="0.75" promptText="E-mail" />
+            <TextField fx:id="emailField" layoutX="444.0" layoutY="161.0" opacity="0.75" promptText="E-mail" />
             <Button fx:id="loginButton" layoutX="474.0" layoutY="282.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="90.0" text="Log In">
                <font>
                   <Font name="SimSun-ExtB" size="10.0" />
@@ -37,7 +38,7 @@
                </font>
             </Hyperlink>
             <PasswordField fx:id="enterPasswordField" layoutX="445.0" layoutY="207.0" opacity="0.75" promptText="Password" />
-            <Text fx:id="errorText" fill="#ff0000" layoutX="441.0" layoutY="261.0" opacity="0.65" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Label fx:id="errorText" layoutX="505.0" layoutY="250.0" />
       </children>
     </AnchorPane>
   </children>
