@@ -19,19 +19,23 @@ public class RegistrationController {
     @FXML
     private Label reg_errorid;
     User user;
-
+    Main s = new Main();
 
     public void registrationButtonOnAction() throws IOException {
-        Main s=new Main();
-        String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
-        if (!email_id.equals(emailPattern) || email_id.getText().isEmpty() || password_id.getText().isEmpty() || repassword_id.getText().isEmpty() || !password_id.equals(repassword_id)){
-        reg_errorid.setText("Въведете коректни данни!");
 
+        String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]";
+        if (email_id.getText().isEmpty() && password_id.getText().isEmpty() && repassword_id.getText().isEmpty()){
+        reg_errorid.setText("Въведете данни!");
+
+        } else if (!email_id.getText().equals(emailPattern ) || !repassword_id.getText().equals(password_id)) {
+            reg_errorid.setText("Грешно въведени данни!");
         }
-        else {
-            //  User user=new User(email_id, password_id);
-            // user.
-            s.changeScene("home.fxml");
-        }
+
+        else{
+                //  User user=new User(email_id, password_id);
+                // user.
+                s.changeScene("home.fxml");
+            }
+
     }
 }
