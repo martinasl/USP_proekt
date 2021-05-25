@@ -21,8 +21,8 @@
                   <Image url="@../images/B (2).png" />
                </image>
             </ImageView>
-            <TextField fx:id="emailText" layoutX="444.0" layoutY="161.0" opacity="0.75" promptText="E-mail" />
-            <Button fx:id="loginButton" layoutX="474.0" layoutY="282.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="90.0" text="Log In">
+            <TextField fx:id="email_id" layoutX="444.0" layoutY="161.0" opacity="0.75" promptText="E-mail" />
+            <Button fx:id="loginButton" layoutX="474.0" layoutY="282.0" mnemonicParsing="false" onAction="#loginButton" prefHeight="24.0" prefWidth="90.0" text="Log In">
                <font>
                   <Font name="SimSun-ExtB" size="10.0" />
                </font>
@@ -32,13 +32,13 @@
                   <Font name="SimSun-ExtB" size="24.0" />
                </font>
             </Text>
-            <Hyperlink layoutX="492.0" layoutY="319.0" text="Registration">
+            <Hyperlink fx:id="reg_hyperlink" layoutX="492.0" layoutY="319.0" onAction="#regOnAction" text="Registration">
                <font>
                   <Font name="SimSun-ExtB" size="8.0" />
                </font>
             </Hyperlink>
-            <PasswordField fx:id="enterPasswordField" layoutX="445.0" layoutY="207.0" opacity="0.75" promptText="Password" />
-            <Label fx:id="errorText" layoutX="460.0" layoutY="253.0" prefHeight="13.0" prefWidth="118.0" textFill="RED" />
+            <PasswordField fx:id="password_id" layoutX="445.0" layoutY="207.0" opacity="0.75" promptText="Password" />
+            <Label fx:id="login_error" layoutX="402.0" layoutY="251.0" prefHeight="18.0" prefWidth="239.0" textFill="RED" />
       </children>
     </AnchorPane>
   </children>

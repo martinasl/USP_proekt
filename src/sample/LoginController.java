@@ -1,48 +1,52 @@
 package sample;
 
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Hyperlink;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.control.PasswordField;
-import javafx.scene.image.Image;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.stage.Stage;
-import  javafx.event.ActionEvent;
+import java.io.IOException;
 
-import java.awt.*;
-import java.io.File;
-import java.net.URL;
-import java.util.ResourceBundle;
 
-public class LoginController implements Initializable {
-    @FXML
-    private Label errorText;
-    @FXML
-    private TextField emailText;
-    @FXML
-    private PasswordField enterPasswordField;
+public class LoginController {
     @FXML
     private Button loginButton;
+    @FXML
+    private TextField email_id;
+    @FXML
+    private PasswordField password_id;
+    @FXML
+    private Label login_error;
+    @FXML
+    private Hyperlink reg_hyperlink;
+    Main s=new Main();
 
 
-    public void loginButton() {
-        errorText.setText("Wrong email or password");
-        if(emailText.getText().isBlank() == false && enterPasswordField.getText().isBlank()== false){
-            validateLogin();
 
-        } else {
-            errorText.setText("Wrong email or password");
+    public void loginButton() throws IOException {
+        if (email_id.getText().isEmpty() || password_id.getText().isEmpty()){
+            login_error.setText("Моля попълнете всички полета!");
+        }
+        else{
+            s.changeScene("home.fxml");
 
         }
-    }
-
-
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
 
     }
-    public void validateLogin(){
+
+    @FXML
+    private void regOnAction() throws IOException {
+        reg_hyperlink.setOnAction(e -> {
+            Main s = new Main();
+            try {
+                s.changeScene("registration.fxml");
+            } catch (IOException ioException) {
+                ioException.printStackTrace();
+            }
+        });
 
     }
+
 }
