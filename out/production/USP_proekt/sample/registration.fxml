@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -19,19 +20,20 @@
                   <Image url="@../images/B (1).png" />
                </image>
             </ImageView>
-            <TextField layoutX="447.0" layoutY="144.0" opacity="0.75" promptText="E-mail" />
+            <TextField fx:id="email_id" layoutX="447.0" layoutY="144.0" opacity="0.75" promptText="E-mail" />
             <Text fontSmoothingType="LCD" layoutX="438.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registration" textAlignment="CENTER" wrappingWidth="158.530517578125">
                <font>
                   <Font name="SimSun-ExtB" size="24.0" />
                </font>
             </Text>
-            <Button layoutX="479.0" layoutY="308.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="90.0" text="Registration" textAlignment="CENTER">
+            <Button fx:id="registrationButton_id" layoutX="479.0" layoutY="308.0" mnemonicParsing="false" onAction="#registrationButtonOnAction" prefHeight="19.0" prefWidth="90.0" text="Registration" textAlignment="CENTER">
                <font>
                   <Font name="SimSun-ExtB" size="10.0" />
                </font>
             </Button>
-            <PasswordField layoutX="447.0" layoutY="188.0" opacity="0.75" promptText="Password" />
-            <PasswordField layoutX="447.0" layoutY="232.0" opacity="0.75" promptText="Confirm password" />
+            <PasswordField fx:id="password_id" layoutX="447.0" layoutY="188.0" opacity="0.75" promptText="Password" />
+            <PasswordField fx:id="repassword_id" layoutX="447.0" layoutY="232.0" opacity="0.75" promptText="Confirm password" />
+            <Label fx:id="reg_errorid" layoutX="447.0" layoutY="273.0" prefHeight="19.0" prefWidth="201.0" textFill="#ef0505" />
       </children>
     </AnchorPane>
   </children>
