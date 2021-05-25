@@ -38,7 +38,10 @@
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files>
+      <object connection-id="877dccc9-8afa-4309-9e1e-3f5bcd511da6" object-ref="schemas/USP/tables/GRAD" />
       <object connection-id="877dccc9-8afa-4309-9e1e-3f5bcd511da6" object-ref="schemas/USP/tables/IMOTI" />
+      <object connection-id="877dccc9-8afa-4309-9e1e-3f5bcd511da6" object-ref="schemas/USP/tables/IZLOJENIE" />
+      <object connection-id="877dccc9-8afa-4309-9e1e-3f5bcd511da6" object-ref="schemas/USP/tables/USERS" />
     </open-files>
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
