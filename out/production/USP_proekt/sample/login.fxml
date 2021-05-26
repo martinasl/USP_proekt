@@ -38,7 +38,7 @@
                </font>
             </Hyperlink>
             <PasswordField fx:id="password_id" layoutX="445.0" layoutY="207.0" opacity="0.75" promptText="Password" />
-            <Label fx:id="login_error" layoutX="402.0" layoutY="251.0" prefHeight="18.0" prefWidth="239.0" textFill="RED" />
+            <Label fx:id="login_error" layoutX="402.0" layoutY="251.0" prefHeight="18.0" prefWidth="239.0" textAlignment="CENTER" textFill="RED" />
       </children>
     </AnchorPane>
   </children>

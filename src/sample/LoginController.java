@@ -26,7 +26,7 @@ public class LoginController {
 
 
     public void loginButton() throws IOException {
-        if (email_id.getText().isEmpty() || password_id.getText().isEmpty()){
+        if (email_id.getText().isEmpty() || password_id.getText().isEmpty()) {
             login_error.setText("Моля попълнете всички полета!");
         }
         else{
