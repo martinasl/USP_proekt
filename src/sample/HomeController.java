@@ -6,6 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import java.io.IOException;
@@ -33,7 +34,7 @@ public class HomeController {
      add_id.setOnAction(e -> {
     Main s=new Main();
          try {
-             s.changeScene("add.fxml");
+             s.changeScene2("add.fxml");
          } catch (IOException ioException) {
              ioException.printStackTrace();
          }

@@ -13,8 +13,8 @@ public class Main extends Application {
 
 
     @Override
-    public void start(Stage primaryStage) throws Exception{
-        stage=primaryStage;
+    public void start(Stage primaryStage) throws Exception {
+        stage = primaryStage;
 
         Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
         Scene scene = new Scene(root);
@@ -25,11 +25,29 @@ public class Main extends Application {
     }
 
     public void changeScene(String fxml) throws IOException {
-        Parent pane=FXMLLoader.load(getClass().getResource(fxml));
+        Parent pane = FXMLLoader.load(getClass().getResource(fxml));
         stage.getScene().setRoot(pane);
+
+    }
+    public void changeScene1(String fxml) throws IOException {
+        Parent pane = FXMLLoader.load(getClass().getResource(fxml));
+        stage.getScene().setRoot(pane);
+        stage.setResizable(true);
+        stage.setTitle("Home");
+
+
+    }
+    public void changeScene2(String fxml) throws IOException {
+        Parent pane = FXMLLoader.load(getClass().getResource(fxml));
+        stage.getScene().setRoot(pane);
+        stage.setResizable(true);
+        stage.setTitle("Add");
+
+
     }
 
     public static void main(String[] args) {
         launch(args);
     }
+
 }

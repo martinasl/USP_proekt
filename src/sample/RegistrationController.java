@@ -1,9 +1,16 @@
 package sample;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Button;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
+
+import javax.swing.*;
 import java.io.IOException;
 
 public class RegistrationController {
@@ -24,6 +31,8 @@ public class RegistrationController {
     public void registrationButtonOnAction() throws IOException {
 
 
+
+
         String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]";
         if (email_id.getText().isEmpty() && password_id.getText().isEmpty() && repassword_id.getText().isEmpty()){
         reg_errorid.setText("Въведете данни!");
@@ -35,7 +44,9 @@ public class RegistrationController {
         else{
                 //  User user=new User(email_id, password_id);
                 // user.
-                s.changeScene("home.fxml");
+            s.changeScene("home.fxml");
+
+
             }
 
     }
