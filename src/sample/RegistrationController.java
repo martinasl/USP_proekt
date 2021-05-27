@@ -33,11 +33,10 @@ public class RegistrationController {
 
 
 
-        String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]";
         if (email_id.getText().isEmpty() && password_id.getText().isEmpty() && repassword_id.getText().isEmpty()){
         reg_errorid.setText("Въведете данни!");
 
-        } else if (!email_id.getText().equals(emailPattern) && !repassword_id.getText().equals(password_id.getText())) {
+        } else if ( !repassword_id.getText().equals(password_id.getText())) {
             reg_errorid.setText("Грешно въведени данни!");
         }
 
@@ -45,9 +44,8 @@ public class RegistrationController {
                 //  User user=new User(email_id, password_id);
                 // user.
             s.changeScene("home.fxml");
-
-
             }
-
     }
+
+
 }
