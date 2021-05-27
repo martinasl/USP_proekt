@@ -46,7 +46,7 @@ public class LoginController<nextStage, stage> {
             Main s = new Main();
             try {
 
-                s.changeScene("registration.fxml");
+                s.changeScene3("registration.fxml");
             } catch (IOException ioException) {
                 ioException.printStackTrace();
             }
