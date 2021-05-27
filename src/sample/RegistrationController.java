@@ -12,6 +12,12 @@ import javafx.stage.Stage;
 
 import javax.swing.*;
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.*;
+import oracle.jdbc.driver.*;
+
 
 public class RegistrationController {
 
@@ -31,20 +37,40 @@ public class RegistrationController {
     public void registrationButtonOnAction() throws IOException {
 
 
+        if (email_id.getText().isEmpty() && password_id.getText().isEmpty() && repassword_id.getText().isEmpty()) {
+            reg_errorid.setText("Въведете данни!");
 
-
-        if (email_id.getText().isEmpty() && password_id.getText().isEmpty() && repassword_id.getText().isEmpty()){
-        reg_errorid.setText("Въведете данни!");
-
-        } else if ( !repassword_id.getText().equals(password_id.getText())) {
+        } else if (!repassword_id.getText().equals(password_id.getText())) {
             reg_errorid.setText("Грешно въведени данни!");
-        }
-
-        else{
-                //  User user=new User(email_id, password_id);
-                // user.
+        } else {
+            //  User user=new User(email_id, password_id);
+            // user.
             s.changeScene("home.fxml");
-            }
+        }
+    }
+
+    private static Connection conn = null;
+
+    public  void connectDB(Connection connection) throws SQLException {
+
+        try {
+            String DBURL = "jdbc:oracle:thin:@localhost:1521:xe";
+            String username = "USP";
+            String password = "usp";
+            String email = email_id.getText();
+            String pass = password_id.getText();
+            String INSERT_QUERY = "INSERT INTO USP.USERS(e-mail,password) VALUES(\'" + email + "\'," + pass + ")";
+            PreparedStatement preparedStatement = conn.prepareStatement(INSERT_QUERY);
+            preparedStatement.setString(1, username);
+            preparedStatement.setString(2, password);
+            System.out.println(preparedStatement);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            DriverManager.registerDriver(new oracle.jdbc.OracleDriver());
+            conn = DriverManager.getConnection(DBURL, username, password);
+        } catch (SQLException e) {
+            e.printStackTrace();
+
+        }
     }
 
 
