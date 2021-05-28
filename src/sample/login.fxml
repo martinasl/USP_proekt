@@ -21,7 +21,7 @@
                   <Image url="@../images/B (2).png" />
                </image>
             </ImageView>
-            <TextField fx:id="username_id" layoutX="444.0" layoutY="161.0" opacity="0.75" promptText="Username" />
+            <TextField fx:id="email_id" layoutX="444.0" layoutY="161.0" opacity="0.75" promptText="E-mail" />
             <Button fx:id="loginButton" layoutX="474.0" layoutY="282.0" mnemonicParsing="false" onAction="#loginButton" prefHeight="24.0" prefWidth="90.0" text="Log In">
                <font>
                   <Font name="SimSun-ExtB" size="10.0" />

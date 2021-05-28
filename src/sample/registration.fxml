@@ -20,7 +20,7 @@
                   <Image url="@../images/B (1).png" />
                </image>
             </ImageView>
-            <TextField fx:id="username_id" layoutX="447.0" layoutY="144.0" opacity="0.75" promptText="Username" />
+            <TextField fx:id="email_id" layoutX="447.0" layoutY="144.0" opacity="0.75" promptText="E-mail" />
             <Text fontSmoothingType="LCD" layoutX="438.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registration" textAlignment="CENTER" wrappingWidth="158.530517578125">
                <font>
                   <Font name="SimSun-ExtB" size="24.0" />

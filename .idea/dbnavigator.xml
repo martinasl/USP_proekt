@@ -26,7 +26,7 @@
     <show-object-properties value="true" />
     <loaded-nodes>
       <connection connection-id="a94b395b-3234-4d54-85c9-8cf0dcd7092b">
-        <schema name="USP" object-types="table, view, materialized view, synonym, sequence, procedure, function, package, type, database trigger, dimension, cluster, dblink, constraint, index, column, dataset trigger, nested table" />
+        <schema name="USP" object-types="table, view, materialized view, synonym" />
       </connection>
     </loaded-nodes>
   </component>
