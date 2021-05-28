@@ -36,9 +36,7 @@
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files>
-      <object connection-id="a94b395b-3234-4d54-85c9-8cf0dcd7092b" object-ref="schemas/USP/tables/GRAD" />
-    </open-files>
+    <open-files />
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="a94b395b-3234-4d54-85c9-8cf0dcd7092b" />
