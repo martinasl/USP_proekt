@@ -9,7 +9,7 @@ import java.io.IOException;
 public class RegistrationController {
 
     @FXML
-    private TextField email_id;
+    private TextField username_id;
     @FXML
     private PasswordField password_id;
     @FXML
@@ -23,12 +23,14 @@ public class RegistrationController {
 
     public void registrationButtonOnAction() throws IOException {
         Main s=new Main();
-        String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
-        if (!email_id.equals(emailPattern) || email_id.getText().isEmpty() || password_id.getText().isEmpty() || repassword_id.getText().isEmpty() || !password_id.equals(repassword_id)){
-        reg_errorid.setText("Въведете коректни данни!");
+        if (username_id.getText().isEmpty() || password_id.getText().isEmpty() || repassword_id.getText().isEmpty()){
+            reg_errorid.setText("Въведете данни!");
 
         }
-        else {
+        else if (!repassword_id.getText().equals(password_id.getText())) {
+            reg_errorid.setText("Грешно въведени данни!");
+        }
+        else{
             //  User user=new User(email_id, password_id);
             // user.
             s.changeScene("home.fxml");

@@ -14,7 +14,7 @@ public class LoginController {
     @FXML
     private Button loginButton;
     @FXML
-    private TextField email_id;
+    private TextField username_id;
     @FXML
     private PasswordField password_id;
     @FXML
@@ -26,12 +26,11 @@ public class LoginController {
 
 
     public void loginButton() throws IOException {
-        if (email_id.getText().isEmpty() || password_id.getText().isEmpty()){
+        if (username_id.getText().isEmpty() || password_id.getText().isEmpty()){
             login_error.setText("Моля попълнете всички полета!");
         }
         else{
             s.changeScene("home.fxml");
-
         }
 
     }
