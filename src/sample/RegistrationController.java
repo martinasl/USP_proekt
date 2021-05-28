@@ -31,7 +31,6 @@ public class RegistrationController {
     private Button registrationButton_id;
     @FXML
     private Label reg_errorid;
-    User user;
     Main s = new Main();
 
     public void registrationButtonOnAction() throws IOException {
@@ -45,33 +44,34 @@ public class RegistrationController {
         } else {
             //  User user=new User(email_id, password_id);
             // user.
+
+            String username = email_id.getText();
+            String pass = password_id.getText();
+            String pass2 = repassword_id.getText();
+
+            try {
+
+                //String DBURL = "jdbc:oracle:thin:@localhost:1521:xe";
+                //String username1 = "USP";
+                //String password = "usp";
+                Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","USP","usp");
+                Statement stmt = conn.createStatement();
+                String insertQuery="INSERT INTO USERS(ID_USER,E-mail,PASSWORD) VALUES('"+pass2+"','"+username+"','"+pass+"')";
+                stmt.executeUpdate(insertQuery);
+                System.out.println("done");
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
             s.changeScene("home.fxml");
         }
+
     }
-
-    private static Connection conn = null;
-
-    public  void connectDB(Connection connection) throws SQLException {
-
-        try {
-            String DBURL = "jdbc:oracle:thin:@localhost:1521:xe";
-            String username = "USP";
-            String password = "usp";
-            String email = email_id.getText();
-            String pass = password_id.getText();
-            String INSERT_QUERY = "INSERT INTO USP.USERS(e-mail,password) VALUES(\'" + email + "\'," + pass + ")";
-            PreparedStatement preparedStatement = conn.prepareStatement(INSERT_QUERY);
-            preparedStatement.setString(1, username);
-            preparedStatement.setString(2, password);
-            System.out.println(preparedStatement);
-            ResultSet resultSet = preparedStatement.executeQuery();
-            DriverManager.registerDriver(new oracle.jdbc.OracleDriver());
-            conn = DriverManager.getConnection(DBURL, username, password);
-        } catch (SQLException e) {
-            e.printStackTrace();
-
-        }
-    }
-
-
 }
+
+
+
+
+
+
