@@ -14,8 +14,8 @@
                   <Image url="@../images/B (2).png" />
                </image>
             </ImageView>
-            <TextField fx:id="email_id" layoutX="444.0" layoutY="161.0" opacity="0.75" promptText="Username" />
-            <Button fx:id="loginButton" layoutX="474.0" layoutY="282.0" mnemonicParsing="false" onAction="#loginButton" prefHeight="24.0" prefWidth="90.0" text="Log In">
+            <TextField fx:id="email_id" layoutX="444.0" layoutY="161.0" opacity="0.75" promptText="E-mail" />
+            <Button fx:id="loginButton" layoutX="474.0" layoutY="289.0" mnemonicParsing="false" onAction="#loginButton" prefHeight="24.0" prefWidth="90.0" text="Log In">
                <font>
                   <Font name="SimSun-ExtB" size="10.0" />
                </font>
@@ -31,7 +31,7 @@
                </font>
             </Hyperlink>
             <PasswordField fx:id="password_id" layoutX="445.0" layoutY="207.0" opacity="0.75" promptText="Password" />
-            <Label fx:id="login_error" layoutX="402.0" layoutY="251.0" prefHeight="18.0" prefWidth="239.0" textAlignment="CENTER" textFill="RED" />
+            <Label fx:id="login_error" layoutX="444.0" layoutY="242.0" prefHeight="38.0" prefWidth="149.0" textAlignment="CENTER" textFill="RED" wrapText="true" />
       </children>
     </AnchorPane>
   </children>

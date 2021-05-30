@@ -3,8 +3,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-
-
+import javafx.scene.control.Button;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -19,10 +18,12 @@ public class RegistrationController {
     @FXML
     private PasswordField repassword_id;
     @FXML
+    private Button registrationButton_id;
+    @FXML
     private Label reg_errorid;
     Main s = new Main();
 
-    public void registrationButtonOnAction() throws IOException, SQLException {
+    public void registrationButtonOnAction() throws IOException, SecurityException, SQLException {
 
 
         if (email_id.getText().isEmpty() && password_id.getText().isEmpty() && repassword_id.getText().isEmpty()) {
@@ -30,10 +31,11 @@ public class RegistrationController {
 
         } else if (!repassword_id.getText().equals(password_id.getText())) {
             reg_errorid.setText("Грешно въведени данни!");
-        } else {
-            Connection connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","USP","usp");
-            Statement statement = connection.createStatement();
-            try{
+        }
+        else {
+                Connection connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","USP","usp");
+                Statement statement = connection.createStatement();
+                try{
                     String username = email_id.getText();
                     String pass = password_id.getText();
                     String sql = ("INSERT INTO USERS  ( EMAIL,PASSWORD) VALUES ( '"+username+"' , '"+pass+"')");
@@ -44,12 +46,10 @@ public class RegistrationController {
                 }
             }
 
-        s.changeScene("home.fxml");
+            s.changeScene("home.fxml");
         }
-}
 
-
-
+    }
 
 
 

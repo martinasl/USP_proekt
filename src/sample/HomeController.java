@@ -1,14 +1,8 @@
 package sample;
 
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.StackPane;
-import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
 import java.io.IOException;
 
 
@@ -19,15 +13,6 @@ public class HomeController {
     private Hyperlink search_id;
     @FXML
     private AnchorPane root;
-
-    private void size() throws IOException{
-        AnchorPane pane=FXMLLoader.load(getClass().getResource("home.fxml"));
-        Parent parent = root.getParent();
-       // parent.getChildren().remove(root);
-       // parent.getChildren().add(pane);
-        parent.getChildrenUnmodifiable().remove(root);
-        parent.getChildrenUnmodifiable().add(pane);
-    }
 
   @FXML
     private void addOnAction() throws IOException {

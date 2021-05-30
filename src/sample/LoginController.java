@@ -1,20 +1,19 @@
 package sample;
 
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.control.PasswordField;
-import javafx.stage.Stage;
-
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
 
-public class LoginController<nextStage, stage> {
+public class LoginController {
     @FXML
     private Button loginButton;
     @FXML
@@ -25,17 +24,31 @@ public class LoginController<nextStage, stage> {
     private Label login_error;
     @FXML
     private Hyperlink reg_hyperlink;
-    Main s =new Main();
-
-
+    Main s=new Main();
 
 
     public void loginButton() throws IOException {
-        if (email_id.getText().isEmpty() || password_id.getText().isEmpty()) {
+        if (email_id.getText().isEmpty() || password_id.getText().isEmpty()){
             login_error.setText("Моля попълнете всички полета!");
         }
         else{
-                       s.changeScene1("home.fxml");
+            try {
+                Connection connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "USP", "usp");
+                Statement statement = connection.createStatement();
+                ResultSet resultSet = statement.executeQuery("select EMAIL, PASSWORD from USERS");
+                while (resultSet.next()) {
+                  String suser = resultSet.getString("EMAIL");
+                    String spass= resultSet.getString("PASSWORD");
+                    if (spass.equals(password_id.getText()) && suser.equals((email_id.getText()))) {
+                        s.changeScene1("home.fxml");
+                    } else {
+                        login_error.setText("Не е намерен потребител или грешна парола!");
+                    }
+                }
+            }catch (Exception e) {
+                e.printStackTrace();
+            }
+
         }
 
     }
@@ -45,15 +58,12 @@ public class LoginController<nextStage, stage> {
         reg_hyperlink.setOnAction(e -> {
             Main s = new Main();
             try {
-
-                s.changeScene3("registration.fxml");
+                s.changeScene("registration.fxml");
             } catch (IOException ioException) {
                 ioException.printStackTrace();
             }
         });
 
-
-        }
-
     }
 
+}
