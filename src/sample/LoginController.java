@@ -1,13 +1,16 @@
 package sample;
 
 import javafx.fxml.FXML;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.control.PasswordField;
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
 
 public class LoginController {
@@ -30,7 +33,22 @@ public class LoginController {
             login_error.setText("Моля попълнете всички полета!");
         }
         else{
-            s.changeScene("home.fxml");
+            try {
+                Connection connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "USP", "usp");
+                Statement statement = connection.createStatement();
+                ResultSet resultSet = statement.executeQuery("select PASSWORD from USERS");
+                while (resultSet.next()) {
+                  //  String suser = resultSet.getString("E-mail");
+                    String spass= resultSet.getString("PASSWORD");
+                    if (spass.equals(password_id.getText())) {
+                        s.changeScene1("home.fxml");
+                    } else {
+                        login_error.setText("Не е намерен потребител или грешна парола!");
+                    }
+                }
+            }catch (Exception e) {
+                e.printStackTrace();
+            }
 
         }
 

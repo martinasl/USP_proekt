@@ -8,14 +8,14 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="521.0" prefWidth="378.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="521.0" prefWidth="378.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AddController">
    <children>
       <TextField layoutX="35.0" layoutY="130.0" promptText="Град" />
       <TextField layoutX="35.0" layoutY="195.0" promptText="Изложение" />
       <TextField layoutX="35.0" layoutY="259.0" promptText="Брой стаи " />
       <TextField layoutX="35.0" layoutY="328.0" promptText="Цена" />
       <Button layoutX="110.0" layoutY="391.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="78.0" text="Добави " />
-      <Button layoutX="25.0" layoutY="391.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="78.0" text="Назад" />
+      <Button layoutX="25.0" layoutY="391.0" mnemonicParsing="false" onAction="#addOnAction" prefHeight="34.0" prefWidth="78.0" text="Назад" />
       <AnchorPane layoutY="-2.0" prefHeight="64.0" prefWidth="378.0" style="-fx-background-color: #715c76;">
          <children>
             <Text fill="#fffffff2" layoutX="109.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Добавяне на имоти">

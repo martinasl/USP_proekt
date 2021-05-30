@@ -5,6 +5,9 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Button;
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
 
 public class RegistrationController {
 
@@ -23,15 +26,33 @@ public class RegistrationController {
 
     public void registrationButtonOnAction() throws IOException {
         Main s=new Main();
-        String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
-        if (!email_id.equals(emailPattern) || email_id.getText().isEmpty() || password_id.getText().isEmpty() || repassword_id.getText().isEmpty() || !password_id.equals(repassword_id)){
-        reg_errorid.setText("Въведете коректни данни!");
+        if (email_id.getText().isEmpty() && password_id.getText().isEmpty() && repassword_id.getText().isEmpty()) {
+            reg_errorid.setText("Въведете данни!");
 
+        } else if (!repassword_id.getText().equals(password_id.getText())) {
+            reg_errorid.setText("Грешно въведени данни!");
         }
-        else {
-            //  User user=new User(email_id, password_id);
-            // user.
-            s.changeScene("home.fxml");
+
+          else {
+                String username = email_id.getText();
+                String pass = password_id.getText();
+                String pass2 = repassword_id.getText();
+               // int id = 0;
+                //for(id=0;id>0;id++)
+
+                    try {
+                        Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","USP","usp");
+                        Statement statement = conn.createStatement();
+                        String insertQuery=("INSERT INTO USERS VALUES ('"+pass2+"','"+username+"','"+pass+"')");
+                        statement.executeUpdate(insertQuery);
+                        System.out.println("done");
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+
+                s.changeScene("home.fxml");
+
         }
     }
 }
