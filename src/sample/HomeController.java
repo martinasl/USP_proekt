@@ -1,6 +1,7 @@
 package sample;
 
 import javafx.fxml.FXML;
+import javafx.fxml.LoadException;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.layout.AnchorPane;
 import java.io.IOException;
@@ -15,7 +16,7 @@ public class HomeController {
     private AnchorPane root;
 
   @FXML
-    private void addOnAction() throws IOException {
+    private void addOnAction() throws IOException, LoadException {
      add_id.setOnAction(e -> {
     Main s=new Main();
          try {

@@ -46,7 +46,7 @@ public class RegistrationController {
                 }
             }
 
-            s.changeScene("home.fxml");
+            s.changeScene1("home.fxml");
         }
 
     }

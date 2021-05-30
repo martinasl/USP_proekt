@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -10,12 +13,9 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="521.0" prefWidth="378.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AddController">
    <children>
-      <TextField fx:id="city_id" layoutX="35.0" layoutY="130.0" promptText="Град" />
-      <TextField fx:id="izl_id" layoutX="35.0" layoutY="195.0" promptText="Изложение" />
-      <TextField fx:id="stai_id" layoutX="35.0" layoutY="259.0" promptText="Брой стаи " />
-      <TextField fx:id="price_id" layoutX="35.0" layoutY="328.0" promptText="Цена" />
-      <Button fx:id="addButton" layoutX="110.0" layoutY="391.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="78.0" text="Добави " />
-      <Button fx:id="backButton" layoutX="25.0" layoutY="391.0" mnemonicParsing="false" onAction="#addOnAction" prefHeight="34.0" prefWidth="78.0" text="Назад" />
+      <TextField fx:id="price_id" layoutX="35.0" layoutY="359.0" promptText="Цена" />
+      <Button fx:id="addButton" layoutX="109.0" layoutY="427.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="78.0" text="Добави " />
+      <Button fx:id="backButton" layoutX="24.0" layoutY="427.0" mnemonicParsing="false" onAction="#addOnAction" prefHeight="34.0" prefWidth="78.0" text="Назад" />
       <AnchorPane layoutY="-2.0" prefHeight="64.0" prefWidth="378.0" style="-fx-background-color: #715c76;">
          <children>
             <Text fill="#fffffff2" layoutX="109.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Добавяне на имоти">
@@ -45,5 +45,12 @@
             <Image url="@../images/ap1.jpeg" />
          </image>
       </ImageView>
+      <ComboBox fx:id="city_id" layoutX="31.0" layoutY="195.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="izl_id" layoutX="31.0" layoutY="252.0" prefWidth="150.0" />
+      <Label layoutX="37.0" layoutY="117.0" prefHeight="22.0" prefWidth="78.0" text="Вид на имот:" />
+      <Label layoutX="37.0" layoutY="178.0" text="Град:" />
+      <Label layoutX="37.0" layoutY="235.0" text="Изложение:" />
+      <TextField layoutX="35.0" layoutY="308.0" promptText="Стаи" />
+      <ComboBox layoutX="34.0" layoutY="139.0" prefWidth="150.0" />
    </children>
 </AnchorPane>

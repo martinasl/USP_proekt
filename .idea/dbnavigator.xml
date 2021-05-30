@@ -24,23 +24,30 @@
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
-    <loaded-nodes />
+    <loaded-nodes>
+      <connection connection-id="b4e7f593-8b6e-4223-93e1-f29cf6993b22">
+        <schema name="PUBLIC" object-types="synonym, sequence, function, package, type" />
+        <schema name="USP" object-types="table, view, materialized view, synonym, sequence, procedure, function, package, type, database trigger, dimension, cluster, dblink, constraint, index, column, dataset trigger, nested table" />
+      </connection>
+    </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="4ee74d14-77eb-43ea-9bfb-864ec0941e51">
-      <console name="USP" type="STANDARD" schema="" session="Main" />
+    <connection id="b4e7f593-8b6e-4223-93e1-f29cf6993b22">
+      <console name="USP" type="STANDARD" schema="USP" session="Main" />
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files>
-      <object connection-id="f506b10b-5730-4bec-86c1-7422301c8935" object-ref="schemas/USP/tables/USERS" />
+      <object connection-id="b4e7f593-8b6e-4223-93e1-f29cf6993b22" object-ref="schemas/USP/tables/USERS" />
+      <object connection-id="b4e7f593-8b6e-4223-93e1-f29cf6993b22" object-ref="schemas/USP/tables/IMOTI" />
     </open-files>
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
-    <connection id="4ee74d14-77eb-43ea-9bfb-864ec0941e51" />
+    <connection id="b4e7f593-8b6e-4223-93e1-f29cf6993b22" />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
-    <filter-actions connection-id="4ee74d14-77eb-43ea-9bfb-864ec0941e51" dataset="USP.USERS" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="b4e7f593-8b6e-4223-93e1-f29cf6993b22" dataset="USP.IMOTI" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="b4e7f593-8b6e-4223-93e1-f29cf6993b22" dataset="USP.USERS" active-filter-id="EMPTY_FILTER" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
@@ -68,7 +75,7 @@
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-      <connection id="4ee74d14-77eb-43ea-9bfb-864ec0941e51" active="true">
+      <connection id="b4e7f593-8b6e-4223-93e1-f29cf6993b22" active="true">
         <database>
           <name value="USP" />
           <description value="" />
