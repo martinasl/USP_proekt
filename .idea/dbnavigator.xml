@@ -24,12 +24,7 @@
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
-    <loaded-nodes>
-      <connection connection-id="4ee74d14-77eb-43ea-9bfb-864ec0941e51">
-        <schema name="PUBLIC" object-types="table, view, materialized view, synonym, sequence, function, package, type" />
-        <schema name="USP" object-types="table, view, materialized view, synonym, sequence, procedure, function, package, type, database trigger, dimension, cluster, dblink, constraint, index, column, dataset trigger, nested table" />
-      </connection>
-    </loaded-nodes>
+    <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="4ee74d14-77eb-43ea-9bfb-864ec0941e51">
@@ -38,9 +33,8 @@
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files>
-      <object connection-id="4ee74d14-77eb-43ea-9bfb-864ec0941e51" object-ref="schemas/USP/tables/IMOTI" />
-      <object connection-id="4ee74d14-77eb-43ea-9bfb-864ec0941e51" object-ref="schemas/USP/tables/GRAD" />
-      <object connection-id="4ee74d14-77eb-43ea-9bfb-864ec0941e51" object-ref="schemas/USP/tables/IZLOJENIE" />
+      <object connection-id="b4e7f593-8b6e-4223-93e1-f29cf6993b22" object-ref="schemas/USP/tables/IMOTI" />
+      <object connection-id="b4e7f593-8b6e-4223-93e1-f29cf6993b22" object-ref="schemas/USP/tables/USERS" />
     </open-files>
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">

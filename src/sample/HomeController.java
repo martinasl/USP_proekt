@@ -32,7 +32,7 @@ public class HomeController {
         search_id.setOnAction(e -> {
             Main s=new Main();
             try {
-                s.changeScene("search.fxml");
+                s.changeScene4("filter.fxml");
             } catch (IOException ioException) {
                 ioException.printStackTrace();
             }

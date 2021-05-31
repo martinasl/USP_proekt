@@ -21,12 +21,6 @@ public class Main extends Application {
         primaryStage.setScene(new Scene(root,640,400));
         primaryStage.show();
     }
-
-    public void changeScene(String fxml) throws IOException {
-        Parent pane = FXMLLoader.load(getClass().getResource(fxml));
-        stage.getScene().setRoot(pane);
-
-    }
     public void changeScene1(String fxml) throws IOException {
         stage.setResizable(true);
         Parent pane = FXMLLoader.load(getClass().getResource("home.fxml"));
@@ -50,8 +44,13 @@ public class Main extends Application {
         stage.setResizable(true);
         stage.setTitle("Registration");
     }
+    public void changeScene4(String fxml) throws IOException {
+        Parent pane = FXMLLoader.load(getClass().getResource("filter.fxml"));
+        stage.setResizable(true);
+        stage.setTitle("Filter");
+        stage.setScene(new Scene(pane,422,653));
 
-
+    }
 
         public static void main(String[] args) {
         launch(args);
