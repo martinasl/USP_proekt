@@ -58,7 +58,7 @@ public class LoginController {
         reg_hyperlink.setOnAction(e -> {
             Main s = new Main();
             try {
-                s.changeScene("registration.fxml");
+                s.changeScene3("registration.fxml");
             } catch (IOException ioException) {
                 ioException.printStackTrace();
             }
