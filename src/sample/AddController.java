@@ -100,9 +100,9 @@ public class AddController {
             String gradd = city_id.getValue();
             String izll = izl_id.getValue();
             String id = "select i.USERS_ID_USERS  from IMOTI i inner join USERS U on i.USERS_ID_USERS=u.ID_USERS";
-            String grad = "select i.grad_id_grad, g.grad from imoti i inner join grad g on i.grad_id_grad=g.id_grad ";
-            statement.executeQuery(grad);
-            String imotii = ("INSERT INTO IMOTI (CENA,STAI,GRAD_ID_GRAD, IZLOJENIE_ID_IZLOJENIE, VID_ID_VID) VALUES ( '"+cena+"' , '"+stai+"','"+grad+"','"+izll+"','"+viddd+"')");
+            statement.executeUpdate(id);
+           String vidid="Select id_vid from vid";
+            String imotii = ("INSERT INTO IMOTI (CENA,STAI,GRAD_ID_GRAD, IZLOJENIE_ID_IZLOJENIE, VID_ID_VID, USERS_ID_USERS) VALUES ( '"+cena+"' , '"+stai+"','"+gradd+"','"+izll+"','"+vidid+"','"+id+"')");
             statement.executeUpdate(imotii);
 
             System.out.println("done");

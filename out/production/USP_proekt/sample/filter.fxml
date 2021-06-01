@@ -1,28 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="653.0" prefWidth="422.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.FilterController">
+<AnchorPane prefHeight="655.0" prefWidth="423.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.FilterController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6abbd1" height="70.0" stroke="BLACK" strokeType="INSIDE" width="424.0" />
-      <Text fill="#fcf6f6" layoutX="147.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Търсене на имот" wrappingWidth="159.59429931640625">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6abbd1" height="70.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="423.0" />
+      <Text fill="#fcf6f6" layoutX="140.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Търсене на имот" wrappingWidth="159.59429931640625">
          <font>
             <Font name="Dutch 801 Extra Bold BT" size="18.0" />
          </font>
       </Text>
-      <TableView layoutX="62.0" layoutY="440.0" prefHeight="200.0" prefWidth="312.0">
+      <TableView layoutX="30.0" layoutY="441.0" prefHeight="200.0" prefWidth="371.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="C1" />
-          <TableColumn prefWidth="75.0" text="C2" />
+          <TableColumn prefWidth="75.0" text="Вид" />
+          <TableColumn prefWidth="75.0" text="Град" />
+            <TableColumn prefWidth="75.0" text="Изложение" />
+            <TableColumn prefWidth="75.0" text="Стаи" />
+            <TableColumn prefWidth="75.0" text="Цена" />
         </columns>
       </TableView>
-      <Button fx:id="backButton" layoutX="96.0" layoutY="407.0" mnemonicParsing="false" onAction="#backOnAction" prefHeight="26.0" prefWidth="71.0" text="Назад" />
-      <Button fx:id="searchButton" layoutX="271.0" layoutY="407.0" mnemonicParsing="false" onAction="#searchOnAction" prefHeight="26.0" prefWidth="71.0" text="Търси" />
+      <Button fx:id="backButton" layoutX="104.0" layoutY="407.0" mnemonicParsing="false" onAction="#backOnAction" prefHeight="26.0" prefWidth="71.0" text="Назад" />
+      <Button fx:id="searchButton" layoutX="254.0" layoutY="407.0" mnemonicParsing="false" onAction="#searchOnAction" prefHeight="26.0" prefWidth="71.0" text="Търси" />
+      <TextField fx:id="price_id" layoutX="140.0" layoutY="345.0" promptText="Цена" />
+      <ComboBox fx:id="city_id" layoutX="140.0" layoutY="184.0" prefWidth="150.0" />
+      <ComboBox fx:id="izl_id" layoutX="140.0" layoutY="241.0" prefWidth="150.0" />
+      <Label layoutX="149.0" layoutY="105.0" prefHeight="22.0" prefWidth="78.0" text="Вид на имот:" />
+      <Label layoutX="149.0" layoutY="166.0" text="Град:" />
+      <Label layoutX="149.0" layoutY="223.0" text="Изложение:" />
+      <TextField fx:id="stai_id" layoutX="140.0" layoutY="294.0" promptText="Стаи" />
+      <ComboBox fx:id="vid_id" layoutX="140.0" layoutY="127.0" prefWidth="150.0" />
    </children>
 </AnchorPane>
