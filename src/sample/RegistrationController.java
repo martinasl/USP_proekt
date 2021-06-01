@@ -44,10 +44,12 @@ public class RegistrationController {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
+            s.changeScene1("home.fxml");
             }
 
-            s.changeScene1("home.fxml");
+
         }
+
 
     }
 
