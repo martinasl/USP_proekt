@@ -1,5 +1,6 @@
 package sample;
 
+import com.sun.javafx.scene.layout.region.Margins;
 import javafx.beans.Observable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -31,6 +32,7 @@ public class AddController {
     final ObservableList<String> izlojenie = FXCollections.observableArrayList();
     final ObservableList<String> vidd =FXCollections.observableArrayList();
 
+
     public AddController() throws SQLException {
     }
     @FXML
@@ -42,7 +44,7 @@ public class AddController {
             ResultSet rs = preparedStatement.executeQuery();
 
             while (rs.next()) {
-                vidd.add(rs.getString("vid"));
+                vidd.addAll(rs.getString("vid"));
             }
             preparedStatement.close();
             rs.close();
@@ -58,6 +60,7 @@ public class AddController {
 
             while (rs1.next()) {
                 cities.add(rs1.getString("GRAD"));
+                //cities.add(rs1.getString("ID_GRAD"));
             }
             preparedStatement.close();
             rs1.close();
@@ -96,10 +99,11 @@ public class AddController {
             String viddd = vid_id.getValue();
             String gradd = city_id.getValue();
             String izll = izl_id.getValue();
-            //String city  = vidd.
             String id = "select i.USERS_ID_USERS  from IMOTI i inner join USERS U on i.USERS_ID_USERS=u.ID_USERS";
-            String imoti = ("INSERT INTO IMOTI (CENA,STAI,GRAD_ID_GRAD, IZLOJENIE_ID_IZLOJENIE, VID_ID_VID) VALUES ( '"+cena+"' , '"+stai+"','"+gradd+"','"+izll+"','"+viddd+"')");
-            statement.executeUpdate(imoti);
+            String grad = "select i.grad_id_grad, g.grad from imoti i inner join grad g on i.grad_id_grad=g.id_grad ";
+            statement.executeQuery(grad);
+            String imotii = ("INSERT INTO IMOTI (CENA,STAI,GRAD_ID_GRAD, IZLOJENIE_ID_IZLOJENIE, VID_ID_VID) VALUES ( '"+cena+"' , '"+stai+"','"+grad+"','"+izll+"','"+viddd+"')");
+            statement.executeUpdate(imotii);
 
             System.out.println("done");
 

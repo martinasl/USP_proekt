@@ -32,8 +32,8 @@
       <Button fx:id="backButton" layoutX="104.0" layoutY="407.0" mnemonicParsing="false" onAction="#backOnAction" prefHeight="26.0" prefWidth="71.0" text="Назад" />
       <Button fx:id="searchButton" layoutX="254.0" layoutY="407.0" mnemonicParsing="false" onAction="#searchOnAction" prefHeight="26.0" prefWidth="71.0" text="Търси" />
       <TextField fx:id="price_id" layoutX="140.0" layoutY="345.0" promptText="Цена" />
-      <ChoiceBox fx:id="city_id" layoutX="140.0" layoutY="184.0" prefWidth="150.0" />
-      <ChoiceBox fx:id="izl_id" layoutX="140.0" layoutY="241.0" prefWidth="150.0" />
+      <ComboBox fx:id="city_id" layoutX="140.0" layoutY="184.0" prefWidth="150.0" />
+      <ComboBox fx:id="izl_id" layoutX="140.0" layoutY="241.0" prefWidth="150.0" />
       <Label layoutX="149.0" layoutY="105.0" prefHeight="22.0" prefWidth="78.0" text="Вид на имот:" />
       <Label layoutX="149.0" layoutY="166.0" text="Град:" />
       <Label layoutX="149.0" layoutY="223.0" text="Изложение:" />
