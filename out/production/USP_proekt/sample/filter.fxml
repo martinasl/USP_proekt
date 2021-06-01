@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="653.0" prefWidth="422.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.FilterController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6abbd1" height="70.0" stroke="BLACK" strokeType="INSIDE" width="424.0" />
+      <Text fill="#fcf6f6" layoutX="147.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Търсене на имот" wrappingWidth="159.59429931640625">
+         <font>
+            <Font name="Dutch 801 Extra Bold BT" size="18.0" />
+         </font>
+      </Text>
+      <TableView layoutX="62.0" layoutY="440.0" prefHeight="200.0" prefWidth="312.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+        </columns>
+      </TableView>
+      <Button fx:id="backButton" layoutX="96.0" layoutY="407.0" mnemonicParsing="false" onAction="#backOnAction" prefHeight="26.0" prefWidth="71.0" text="Назад" />
+      <Button fx:id="searchButton" layoutX="271.0" layoutY="407.0" mnemonicParsing="false" onAction="#searchOnAction" prefHeight="26.0" prefWidth="71.0" text="Търси" />
+   </children>
+</AnchorPane>
