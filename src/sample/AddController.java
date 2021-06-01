@@ -5,7 +5,6 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-
 import javax.xml.transform.Result;
 import java.io.IOException;
 import java.sql.*;
@@ -15,8 +14,6 @@ public class AddController {
     private Button backButton;
     @FXML
     private Button addButton;
-    @FXML
-    private Button loginButton;
     @FXML
     private ComboBox<String> vid_id;
     @FXML
@@ -31,7 +28,7 @@ public class AddController {
 
     Main s = new Main();
     final ObservableList<String> cities = FXCollections.observableArrayList();
-     final ObservableList<String> izlojenie = FXCollections.observableArrayList();
+    final ObservableList<String> izlojenie = FXCollections.observableArrayList();
     final ObservableList<String> vidd =FXCollections.observableArrayList();
 
     public AddController() throws SQLException {
@@ -110,8 +107,9 @@ public class AddController {
             e.printStackTrace();
         }
 
+    }
+    public void backOnAction() throws IOException {
         s.changeScene1("home.fxml");
     }
-
 
     }
